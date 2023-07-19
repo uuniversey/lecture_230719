@@ -55,29 +55,31 @@
 # 1681 ws_3_2
 
 
-# number_of_people = 0
+number_of_people = 0
 
-# def increase_user():
-#     global number_of_people
-#     number_of_people += 1
-#     return bool(1>0)
+def increase_user():
+    global number_of_people
+    number_of_people += 1
+    return bool(1>0)
+
+print('현재 가입 된 유저 수 :', number_of_people)
+
+def create_user(*args):
+    user_info = {}
+    user_info['name'] = args[0]
+    user_info['age'] = args[1]
+    user_info['city'] = args[2]
+    increase_user()
+
+    return user_info
+
+info = create_user('홍길동', 30, '서울')
+name = info.get('name')
 
 
-
-# print('현재 가입 된 유저 수 :', number_of_people)
-
-
-# def create_user(**kwargs):
-#     print(kwargs)
-#     print(name)
-#     return bool(1>0)
-
-
-# user_info = create_user(name = '홍길동', age = '30', address = '서울')
-# print('님 환영합니다!')
-
-
-# print(user_info)
+print(name +'님 환영합니다!')
+print(info)
+print('현재 가입 된 유저 수 :', number_of_people)
 
 
 
